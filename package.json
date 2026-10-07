@@ -1,0 +1,12 @@
+{
+  "name": "unifecaf-loja-online",
+  "version": "1.0.0",
+  "description": "Projeto de loja online para aula de CI",
+  "main": "app.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
