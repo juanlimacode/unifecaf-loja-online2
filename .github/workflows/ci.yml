@@ -12,4 +12,4 @@ jobs:
       - name: Instalar dependências
         run: npm install
       - name: Rodar os testes
-        run: rpm test
+        run: npm test
