@@ -1,6 +1,18 @@
-const assert = require('assert');
+const test = require('node:test');
+const assert = require('node:assert');
+const { calcularTotalCarrinho } = require('./carrinho');
 
-// Teste simples para validar o ambiente de CI
-console.log('Executando testes do carrinho...');
-assert.strictEqual(1 + 1, 2);
-console.log('Todos os testes passaram com sucesso!');
+test('calcula o total do carrinho corretamente', () => {
+  const itens = [
+    { nome: 'Camiseta', preco: 50, quantidade: 2 },
+    { nome: 'Boné', preco: 30, quantidade: 1 },
+  ];
+
+  const total = calcularTotalCarrinho(itens);
+
+  assert.strictEqual(total, 130);
+});
+
+test('carrinho vazio soma zero', () => {
+  assert.strictEqual(calcularTotalCarrinho([]), 0);
+});
